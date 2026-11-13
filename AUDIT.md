@@ -26,8 +26,8 @@ Fecha: 2026-11-13
 - La página usa tarjetas enteras como enlaces, muchos estilos inline y una CSS grande; faltan manifest de sitemap/robots y metadatos de idioma/tema completos.
 - El script depende de nodos presentes y usa alertas; no hay automatización de build, validación ni despliegue.
 - La implementación utiliza `prefers-reduced-motion`, foco visible y layouts responsive, que deben conservarse.
-- Pingo Club no estaba incluido en el inventario local; el nuevo caso de estudio se describe únicamente con los datos proporcionados en la solicitud.
+- Pingo Club se añadió como proyecto regular dentro de la cuadrícula, con demo y repositorio enlazados.
 
 ## Estrategia
 
-Migrar a Astro estático con TypeScript para componer y mantener las secciones, usando CSS nativo acotado para evitar una dependencia de estilos en runtime. Mantener las rutas y los activos existentes compatibles con el dominio y GitHub Pages, integrar Pingo Club con repositorio y demo proporcionados, y añadir metadatos corregidos, sitemap, robots, documentación y un workflow Pages reproducible. No se convierten PNG a formatos nuevos en la auditoría inicial; se medirán los tamaños y se mantendrán las capturas originales.
+Migrar a Astro estático con TypeScript para componer y mantener las secciones, usando CSS nativo acotado para evitar una dependencia de estilos en runtime. Mantener las rutas y los activos existentes compatibles con el dominio y GitHub Pages, incluir Pingo Club dentro de la cuadrícula general con repositorio y demo proporcionados, y añadir metadatos corregidos, sitemap, robots, documentación y un workflow Pages reproducible. No se convierten PNG a formatos nuevos en la auditoría inicial; se medirán los tamaños y se mantendrán las capturas originales.

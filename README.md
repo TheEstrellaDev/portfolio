@@ -34,7 +34,7 @@ npm run preview
 - `src/components/`: navegación, control de tema y tarjetas reutilizables.
 - `src/styles/global.css`: identidad visual responsive y accesible.
 - `src/scripts/main.ts`: filtros, navegación móvil y tema con JavaScript del navegador.
-- `public/webs/`: capturas existentes de proyectos; `public/projects/`: imagen de Pingo Club.
+- `public/webs/`: capturas existentes de proyectos; `public/projects/`: imagen de Pingo Club en la cuadrícula.
 
 No usamos React en este sitio: todas sus secciones se generan en HTML estático y las interacciones pequeñas se resuelven con JavaScript nativo. Pingo Club permanece como proyecto externo independiente.
 
@@ -44,4 +44,4 @@ Un workflow de GitHub Actions compila `main` y despliega `dist/` en GitHub Pages
 
 ## Contenido
 
-La página conserva el perfil profesional, servicios, proceso, tecnologías y las quince capturas de proyectos existentes. Pingo Club se presenta como un caso de estudio con demo y repositorio proporcionados por José. Las citas de Pingo Club se coordinan por WhatsApp; el sitio externo no guarda ni confirma horarios automáticamente.
+La página conserva el perfil profesional, servicios, proceso, tecnologías y las quince proyectos existentes. Pingo Club aparece como el proyecto número dieciséis dentro de la cuadrícula general, con enlaces a su demo y repositorio. Las citas de Pingo Club se coordinan por WhatsApp; el sitio externo no guarda ni confirma horarios automáticamente.

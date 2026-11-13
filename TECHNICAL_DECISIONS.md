@@ -18,7 +18,7 @@ El tema inicial respeta la preferencia del sistema y permite alternar entre clar
 
 ## Imágenes
 
-Las quince capturas se sirven como WebP redimensionado a un máximo de 1500 px y calidad 78. Los originales permanecen en `webs/`; las versiones optimizadas viven en `public/webs/`. La conversión redujo esas capturas de aproximadamente 27.7 MB a 1.16 MB (96%). El caso Pingo usa una fotografía real alojada en su repositorio público; dicho repositorio no se modifica.
+Las quince capturas se sirven como WebP redimensionado a un máximo de 1500 px y calidad 78. Los originales permanecen en `webs/`; las versiones optimizadas viven en `public/webs/`. La conversión redujo esas capturas de aproximadamente 27.7 MB a 1.16 MB (96%). La tarjeta de Pingo Club usa una captura de proyecto y conserva el enlace a su demo externa.
 
 ## GitHub Pages
 
