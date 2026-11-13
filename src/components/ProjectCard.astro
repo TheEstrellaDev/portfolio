@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  href: string;
+  featured?: boolean;
+  tags?: string[];
+  repository?: string;
+}
+const { title, description, category, image, href, featured = false, tags = [], repository } = Astro.props;
+---
+<article class:list={["project-card", { featured }]} data-category={category}>
+  <a class="project-image-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Ver ${title}`}>
+    <img src={image} alt={`Captura del proyecto ${title}`} loading="lazy" decoding="async" width="900" height="560" />
+    <span class="image-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="project-content">
+    <span class="project-status">{featured ? "Caso de estudio" : "Publicado"}</span>
+    <h3 class="project-title">{title}</h3>
+    <p class="project-desc">{description}</p>
+    {tags.length > 0 && <ul class="project-tech" aria-label="Tecnologías">{tags.map((tag) => <li class="tech-tag">{tag}</li>)}</ul>}
+    <div class="project-links">
+      <a class="project-link" href={href} target="_blank" rel="noopener noreferrer">Ver demo <span aria-hidden="true">↗</span></a>
+      {repository && <a class="project-link" href={repository} target="_blank" rel="noopener noreferrer">Código fuente <span aria-hidden="true">↗</span></a>}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,23 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+interface Props { title?: string; description?: string; }
+const { title = 'José Estrella — Desarrollador web freelance', description = 'Soy José Estrella, desarrollador web freelance de Zacatecas. Diseño y desarrollo sitios rápidos, accesibles y adaptados a móviles.' } = Astro.props;
+const canonical = new URL('/portfolio/', Astro.site);
+---
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11130f" /><meta name="color-scheme" content="dark light" />
+    <meta name="description" content={description} /><meta name="author" content="José Estrella" />
+    <link rel="canonical" href={canonical} /><link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="sitemap" href={`${import.meta.env.BASE_URL}sitemap.xml`} />
+    <meta property="og:type" content="website" /><meta property="og:locale" content="es_MX" /><meta property="og:site_name" content="TheEstrellaDev" />
+    <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:image" content={new URL('/portfolio/preview.png', Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={new URL('/portfolio/preview.png', Astro.site)} />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: 'José Estrella', alternateName: 'TheEstrellaDev', url: canonical.href, image: new URL('/portfolio/images/me.jpg', Astro.site).href, jobTitle: 'Desarrollador web freelance', address: { '@type': 'PostalAddress', addressRegion: 'Zacatecas', addressCountry: 'MX' }, sameAs: ['https://github.com/TheEstrellaDev', 'https://www.linkedin.com/in/jos%C3%A9-estrella-406771422/', 'https://www.tiktok.com/@estrella.developer'] })} />
+    <title>{title}</title>
+  </head>
+  <body><SiteHeader /><slot /><script>import '../scripts/main.ts';</script></body>
+</html>
